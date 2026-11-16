@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bright Future International School</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --blue: #2457d6;
+    --blue-dark: #173b9b;
+    --sky: #eaf3ff;
+    --teal: #19a99a;
+    --coral: #ff826e;
+    --yellow: #ffd166;
+    --cream: #fffaf1;
+    --white: #ffffff;
+    --dark: #192b45;
+    --muted: #66758b;
+    --border: #e7edf5;
+    --shadow: 0 15px 45px rgba(30, 65, 120, 0.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+button, input, textarea, select {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1160px, 90%);
+    margin: auto;
+}
+
+/* TOP BAR */
+
+.topbar {
+    background: var(--blue-dark);
+    color: white;
+    padding: 9px 0;
+    font-size: 12px;
+}
+
+.topbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.topbar-right {
+    display: flex;
+    gap: 22px;
+}
+
+/* NAVIGATION */
+
+header {
+    background: rgba(255,255,255,0.96);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.04);
+}
+
+.navbar {
+    min-height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    height: 48px;
+    width: 48px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, var(--blue), #5b8cff);
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.logo-text h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--blue-dark);
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+.logo-text span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dark);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+.nav-button {
+    background: var(--coral);
+    color: white !important;
+    padding: 12px 20px;
+    border-radius: 9px;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: var(--sky);
+    color: var(--blue);
+    font-size: 24px;
+    padding: 7px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(115deg, #eaf3ff 0%, #f5f9ff 52%, #fff3e8 100%);
+    padding: 75px 0 85px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(255,209,102,0.25);
+    border-radius: 50%;
+    top: -150px;
+    right: -100px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 55px;
+    position: relative;
+}
+
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 30px;
+    background: white;
+    color: var(--teal);
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 22px;
+    box-shadow: 0 5px 20px rgba(30,65,120,0.06);
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.13;
+    color: var(--blue-dark);
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: var(--coral);
+}
+
+.hero-description {
+    color: var(--muted);
+    max-width: 500px;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 23px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--blue-dark);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--blue);
+    border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+}
+
+.floating-card {
+    position: absolute;
+    background: white;
+    padding: 16px 20px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    bottom: 25px;
+    left: -35px;
+}
+
+.floating-card strong {
+    display: block;
+    color: var(--blue);
+    font-size: 23px;
+}
+
+.floating-card span {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* QUICK HIGHLIGHTS */
+
+.highlights {
+    padding: 0;
+    position: relative;
+    margin-top: -1px;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: white;
+    box-shadow: var(--shadow);
+    border-radius: 16px;
+    padding: 28px 15px;
+    margin-top: -35px;
+    position: relative;
+    z-index: 2;
+}
+
+.highlight-item {
+    text-align: center;
+    border-right: 1px solid var(--border);
+    padding: 5px 10px;
+}
+
+.highlight-item:last-child {
+    border: none;
+}
+
+.highlight-item h2 {
+    color: var(--blue);
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.highlight-item p {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* COMMON SECTION */
+
+section {
+    padding: 85px 0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.section-tag {
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: var(--blue-dark);
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--yellow);
+    padding: 22px;
+    border-radius: 15px;
+    text-align: center;
+    color: var(--blue-dark);
+}
+
+.about-badge strong {
+    display: block;
+    font-size: 25px;
+}
+
+.about-content .section-tag {
+    margin-bottom: 12px;
+}
+
+.about-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 37px;
+    color: var(--blue-dark);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about-content > p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+.about-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.about-point {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.check {
+    width: 25px;
+    height: 25px;
+    background: #e5f8f3;
+    color: var(--teal);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+/* ACADEMICS */
+
+.academics {
+    background: var(--sky);
+}
+
+.academic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.academic-card {
+    background: white;
+    padding: 30px;
+    border-radius: 17px;
+    transition: 0.3s;
+    border-bottom: 4px solid transparent;
+}
+
+.academic-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+    border-bottom-color: var(--coral);
+}
+
+.academic-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.icon-blue { background: #e7efff; }
+.icon-coral { background: #fff0eb; }
+.icon-green { background: #e4f8f1; }
+
+.academic-card h3 {
+    color: var(--blue-dark);
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.academic-card p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.academic-card a {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* FACILITIES */
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.facility-card {
+    overflow: hidden;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 7px 25px rgba(30,65,120,0.07);
+    transition: 0.3s;
+}
+
+.facility-card:hover {
+    transform: translateY(-6px);
+}
+
+.facility-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.facility-info {
+    padding: 22px;
+}
+
+.facility-info h3 {
+    color: var(--blue-dark);
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.facility-info p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* WHY CHOOSE US */
+
+.why-us {
+    background: var(--cream);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.why-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.why-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 37px;
+    color: var(--blue-dark);
+    margin-bottom: 25px;
+}
+
+.why-item {
+    display: flex;
+    gap: 17px;
+    margin-bottom: 22px;
+}
+
+.why-number {
+    min-width: 42px;
+    height: 42px;
+    background: var(--yellow);
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    color: var(--blue-dark);
+    font-weight: 800;
+}
+
+.why-item h3 {
+    color: var(--blue-dark);
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.why-item p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* CAMPUS LIFE */
+
+.campus-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.campus-card {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.campus-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.campus-card:hover img {
+    transform: scale(1.08);
+}
+
+.campus-card div {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 35px 17px 17px;
+    color: white;
+    background: linear-gradient(transparent, rgba(10,25,50,0.85));
+    font-weight: 800;
+    font-size: 15px;
+}
+
+/* ADMISSION */
+
+.admission {
+    background: linear-gradient(120deg, var(--blue-dark), var(--blue));
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.admission::after {
+    content: "✦";
+    position: absolute;
+    right: 8%;
+    top: 10%;
+    font-size: 180px;
+    color: rgba(255,255,255,0.08);
+}
+
+.admission-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.admission-content .section-tag {
+    color: var(--yellow);
+}
+
+.admission-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.admission-content p {
+    color: #dce8ff;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.admission-steps {
+    display: grid;
+    gap: 13px;
+    margin-top: 25px;
+}
+
+.admission-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    background: var(--yellow);
+    color: var(--blue-dark);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.admission-form {
+    background: white;
+    padding: 32px;
+    border-radius: 18px;
+    color: var(--dark);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.15);
+}
+
+.admission-form h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--blue-dark);
+    font-size: 24px;
+    margin-bottom: 7px;
+}
+
+.admission-form > p {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 22px;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    color: var(--dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    font-size: 12px;
+    color: var(--dark);
+    background: #fbfcff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--blue);
+}
+
+.admission-form button {
+    width: 100%;
+}
+
+/* TESTIMONIALS */
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.testimonial {
+    padding: 27px;
+    background: #f8faff;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+}
+
+.stars {
+    color: #f2b544;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.testimonial p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.parent-avatar {
+    width: 42px;
+    height: 42px;
+    background: var(--sky);
+    color: var(--blue);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+}
+
+.parent h4 {
+    font-size: 13px;
+    color: var(--blue-dark);
+}
+
+.parent span {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* FAQ */
+
+.faq {
+    background: var(--sky);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 11px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 18px 22px;
+    font-size: 14px;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: var(--blue-dark);
+}
+
+.faq-question span {
+    font-size: 20px;
+    color: var(--blue);
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 22px 18px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-question span {
+    transform: rotate(45deg);
+}
+
+/* CONTACT */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+}
+
+.contact-content h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--blue-dark);
+    font-size: 37px;
+    margin-bottom: 15px;
+}
+
+.contact-content > p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 28px;
+}
+
+.contact-detail {
+    display: flex;
+    gap: 13px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.contact-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: var(--sky);
+    color: var(--blue);
+    display: grid;
+    place-items: center;
+    font-size: 19px;
+}
+
+.contact-detail h4 {
+    color: var(--blue-dark);
+    font-size: 13px;
+}
+
+.contact-detail p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.contact-form {
+    background: #f8faff;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+.contact-form h3 {
+    color: var(--blue-dark);
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+}
+
+.contact-form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* FOOTER */
+
+footer {
+    background: #142d59;
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 35px;
+    margin-bottom: 45px;
+}
+
+.footer-brand h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: #c3d1e9;
+    font-size: 12px;
+    max-width: 280px;
+}
+
+.footer-column h3 {
+    font-size: 14px;
+    margin-bottom: 18px;
+    color: var(--yellow);
+}
+
+.footer-column a {
+    display: block;
+    color: #c3d1e9;
+    font-size: 12px;
+    margin-bottom: 11px;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: #b5c5df;
+    font-size: 11px;
+}
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(10,25,50,0.65);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: white;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 17px;
+    padding: 35px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    color: var(--blue-dark);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 950px) {
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .why-grid,
+    .admission-grid,
+    .contact-grid {
+        gap: 35px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 750px) {
+    .topbar-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .topbar-right {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+        box-shadow: var(--shadow);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 55px 0 70px;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .why-grid,
+    .admission-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .floating-card {
+        left: 10px;
+    }
+
+    .highlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .highlight-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .highlight-item:nth-child(3),
+    .highlight-item:nth-child(4) {
+        border-top: 1px solid var(--border);
+        padding-top: 18px;
+    }
+
+    .academic-grid,
+    .facility-grid,
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .campus-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-image img,
+    .why-image img {
+        height: 320px;
+    }
+
+    .about-badge {
+        right: 10px;
+    }
+
+    .section-heading h2,
+    .about-content h2,
+    .why-content h2,
+    .contact-content h2 {
+        font-size: 31px;
+    }
+
+    .admission-content h2 {
+        font-size: 35px;
+    }
+}
+
+@media(max-width: 480px) {
+    .academic-grid,
+    .facility-grid,
+    .testimonial-grid,
+    .campus-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-grid {
+        padding: 20px 10px;
+    }
+
+    .highlight-item h2 {
+        font-size: 24px;
+    }
+
+    .about-points {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+
+    .admission-form,
+    .contact-form {
+        padding: 23px;
+    }
+
+    .footer-bottom {
+        justify-content: center;
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+    <div class="container topbar-content">
+        <div>✦ Building Knowledge, Character & Confidence</div>
+        <div class="topbar-right">
+            <span>☎ +91 98765 43210</span>
+            <span>✉ info@brightfuture.edu.in</span>
+        </div>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+<header>
+    <div class="container navbar">
+
+        <a href="#" class="logo">
+            <div class="logo-icon">B</div>
+            <div class="logo-text">
+                <h2>Bright Future</h2>
+                <span>INTERNATIONAL SCHOOL</span>
+            </div>
+        </a>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About Us</a></li>
+            <li><a href="#academics" onclick="closeMenu()">Academics</a></li>
+            <li><a href="#facilities" onclick="closeMenu()">Facilities</a></li>
+            <li><a href="#campus" onclick="closeMenu()">Campus Life</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            <li><a href="#admission" class="nav-button" onclick="closeMenu()">Apply Now ↗</a></li>
+        </ul>
+
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="container hero-grid">
+
+        <div>
+            <div class="hero-tag">✦ ADMISSIONS OPEN FOR 2026–27</div>
+
+            <h1>
+                Where Little Minds
+                <span>Dream Big</span>
+                & Achieve More.
+            </h1>
+
+            <p class="hero-description">
+                At Bright Future International School, we nurture curious minds,
+                encourage creativity and build the confidence children need to
+                shape a better tomorrow.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#admission" class="btn btn-primary">Explore Admissions →</a>
+                <a href="#about" class="btn btn-secondary">Discover Our School</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85" alt="Students learning in a classroom">
+
+            <div class="floating-card">
+                <strong>Learn. Grow. Shine.</strong>
+                <span>Every child has a bright future.</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<div class="highlights">
+    <div class="container">
+        <div class="highlight-grid">
+
+            <div class="highlight-item">
+                <h2>25+</h2>
+                <p>Years of Excellence</p>
+            </div>
+
+            <div class="highlight-item">
+                <h2>1200+</h2>
+                <p>Happy Students</p>
+            </div>
+
+            <div class="highlight-item">
+                <h2>80+</h2>
+                <p>Expert Educators</p>
+            </div>
+
+            <div class="highlight-item">
+                <h2>20+</h2>
+                <p>Learning Facilities</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="container about-grid">
+
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1000&q=85" alt="School building and campus">
+
+            <div class="about-badge">
+                <strong>25+</strong>
+                <span>Years of Learning</span>
+            </div>
+        </div>
+
+        <div class="about-content">
+            <span class="section-tag">WHO WE ARE</span>
+
+            <h2>Education That Goes Beyond Textbooks</h2>
+
+            <p>
+                We believe that every child is unique and deserves an environment
+                where they can explore, experiment and discover their true potential.
+            </p>
+
+            <p>
+                Our approach combines academic excellence with sports, arts,
+                technology and character development to prepare students for
+                the opportunities of tomorrow.
+            </p>
+
+            <div class="about-points">
+                <div class="about-point">
+                    <span class="check">✓</span>
+                    Student-Centred Learning
+                </div>
+
+                <div class="about-point">
+                    <span class="check">✓</span>
+                    Experienced Teachers
+                </div>
+
+                <div class="about-point">
+                    <span class="check">✓</span>
+                    Modern Classrooms
+                </div>
+
+                <div class="about-point">
+                    <span class="check">✓</span>
+                    Holistic Development
+                </div>
+            </div>
+
+            <a href="#contact" class="btn btn-primary">Know More About Us →</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ACADEMICS -->
+<section class="academics" id="academics">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-tag">OUR ACADEMIC PROGRAMMES</span>
+            <h2>Learning for Every Stage of Childhood</h2>
+            <p>
+                A carefully designed learning journey that develops knowledge,
+                creativity and confidence at every stage.
+            </p>
+        </div>
+
+        <div class="academic-grid">
+
+            <div class="academic-card">
+                <div class="academic-icon icon-coral">🧸</div>
+                <h3>Pre-Primary School</h3>
+                <p>
+                    A joyful beginning through play-based learning, storytelling,
+                    activities and early childhood development.
+                </p>
+                <a href="#admission">Explore Programme →</a>
+            </div>
+
+            <div class="academic-card">
+                <div class="academic-icon icon-blue">📚</div>
+                <h3>Primary School</h3>
+                <p>
+                    Strong foundations in language, mathematics, science and
+                    essential life skills through interactive learning.
+                </p>
+                <a href="#admission">Explore Programme →</a>
+            </div>
+
+            <div class="academic-card">
+                <div class="academic-icon icon-green">🎓</div>
+                <h3>Secondary School</h3>
+                <p>
+                    Advanced academic learning, critical thinking and preparation
+                    for higher education and future careers.
+                </p>
+                <a href="#admission">Explore Programme →</a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FACILITIES -->
+<section id="facilities">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-tag">OUR FACILITIES</span>
+            <h2>A Campus Designed to Inspire</h2>
+            <p>
+                Safe, modern and engaging spaces that make learning an exciting
+                everyday experience.
+            </p>
+        </div>
+
+        <div class="facility-grid">
+
+            <div class="facility-card">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Smart classroom">
+                <div class="facility-info">
+                    <h3>Smart Classrooms</h3>
+                    <p>Technology-enabled classrooms that make concepts easier to understand.</p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80" alt="School library">
+                <div class="facility-info">
+                    <h3>Library & Reading Zone</h3>
+                    <p>A welcoming space filled with books that encourage curiosity and imagination.</p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Science laboratory">
+                <div class="facility-info">
+                    <h3>Science & Computer Labs</h3>
+                    <p>Hands-on learning environments for scientific exploration and digital skills.</p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <img src="https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=800&q=80" alt="Sports facility">
+                <div class="facility-info">
+                    <h3>Sports & Playground</h3>
+                    <p>Opportunities to develop teamwork, discipline and physical fitness.</p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80" alt="Activity room">
+                <div class="facility-info">
+                    <h3>Creative Activity Rooms</h3>
+                    <p>Dedicated spaces for art, music, dance and creative expression.</p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="School students">
+                <div class="facility-info">
+                    <h3>Student Support</h3>
+                    <p>A supportive environment focused on student well-being and individual growth.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-us">
+
+    <div class="container why-grid">
+
+        <div class="why-image">
+            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=900&q=85" alt="Teacher helping students">
+        </div>
+
+        <div class="why-content">
+
+            <span class="section-tag">WHY CHOOSE US</span>
+
+            <h2>More Than a School, A Place to Grow</h2>
+
+            <div class="why-item">
+                <div class="why-number">01</div>
+                <div>
+                    <h3>Personal Attention</h3>
+                    <p>We recognise individual strengths and encourage every student to progress confidently.</p>
+                </div>
+            </div>
+
+            <div class="why-item">
+                <div class="why-number">02</div>
+                <div>
+                    <h3>Learning by Doing</h3>
+                    <p>Practical activities, projects and discussions bring classroom concepts to life.</p>
+                </div>
+            </div>
+
+            <div class="why-item">
+                <div class="why-number">03</div>
+                <div>
+                    <h3>Values & Character</h3>
+                    <p>We encourage responsibility, respect, kindness and a positive attitude.</p>
+                </div>
+            </div>
+
+            <div class="why-item">
+                <div class="why-number">04</div>
+                <div>
+                    <h3>Parent Partnership</h3>
+                    <p>Regular communication helps parents stay involved in their child's learning journey.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- CAMPUS LIFE -->
+<section id="campus">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-tag">LIFE AT OUR SCHOOL</span>
+            <h2>Every Day Is an Opportunity to Discover</h2>
+            <p>
+                From classrooms to competitions, students learn, participate
+                and create memories that last a lifetime.
+            </p>
+        </div>
+
+        <div class="campus-grid">
+
+            <div class="campus-card">
+                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=700&q=80" alt="Students enjoying school activities">
+                <div>Fun Learning Activities</div>
+            </div>
+
+            <div class="campus-card">
+                <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=700&q=80" alt="Sports">
+                <div>Sports & Fitness</div>
+            </div>
+
+            <div class="campus-card">
+                <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=700&q=80" alt="Art and creativity">
+                <div>Art & Creativity</div>
+            </div>
+
+            <div class="campus-card">
+                <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=700&q=80" alt="Group activities">
+                <div>Events & Celebrations</div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ADMISSION -->
+<section class="admission" id="admission">
+
+    <div class="container admission-grid">
+
+        <div class="admission-content">
+
+            <span class="section-tag">ADMISSIONS 2026–27</span>
+
+            <h2>Give Your Child the Right Start for a Brighter Tomorrow.</h2>
+
+            <p>
+                Take the first step towards an exciting educational journey.
+                Connect with our admissions team to learn about programmes,
+                eligibility and the admission process.
+            </p>
+
+            <div class="admission-steps">
+
+                <div class="admission-step">
+                    <span class="step-number">1</span>
+                    Submit an admission enquiry
+                </div>
+
+                <div class="admission-step">
+                    <span class="step-number">2</span>
+                    Visit the school campus
+                </div>
+
+                <div class="admission-step">
+                    <span class="step-number">3</span>
+                    Complete the application process
+                </div>
+
+                <div class="admission-step">
+                    <span class="step-number">4</span>
+                    Begin your learning journey
+                </div>
+
+            </div>
+
+        </div>
+
+        <form class="admission-form" onsubmit="handleForm(event, 'Admission enquiry')">
+
+            <h3>Admission Enquiry</h3>
+            <p>Fill in the details and our team will get in touch.</p>
+
+            <div class="form-group">
+                <label>Parent / Guardian Name</label>
+                <input type="text" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Student Name</label>
+                <input type="text" placeholder="Enter student's name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter contact number" pattern="[0-9+\-\s]{8,15}" required>
+            </div>
+
+            <div class="form-group">
+                <label>Class Applying For</label>
+                <select required>
+                    <option value="">Select a class</option>
+                    <option>Pre-Nursery</option>
+                    <option>Nursery</option>
+                    <option>Kindergarten</option>
+                    <option>Class I - V</option>
+                    <option>Class VI - VIII</option>
+                    <option>Class IX - X</option>
+                    <option>Class XI - XII</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Enquiry →</button>
+
+        </form>
+
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-tag">PARENT EXPERIENCES</span>
+            <h2>What Our School Community Says</h2>
+            <p>
+                A positive learning environment is built through trust,
+                collaboration and shared experiences.
+            </p>
+        </div>
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>
+                    "The school provides a wonderful environment for children.
+                    We have seen our child become more confident and curious."
+                </p>
+                <div class="parent">
+                    <div class="parent-avatar">A</div>
+                    <div>
+                        <h4>Parent Name</h4>
+                        <span>Parent of a Primary Student</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>
+                    "The teachers are supportive and the activities encourage
+                    children to explore their interests beyond academics."
+                </p>
+                <div class="parent">
+                    <div class="parent-avatar">R</div>
+                    <div>
+                        <h4>Parent Name</h4>
+                        <span>Parent of a Secondary Student</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>
+                    "We appreciate the focus on both academics and personal
+                    development. The school makes learning enjoyable."
+                </p>
+                <div class="parent">
+                    <div class="parent-avatar">S</div>
+                    <div>
+                        <h4>Parent Name</h4>
+                        <span>Parent of a Kindergarten Student</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-tag">FREQUENTLY ASKED QUESTIONS</span>
+            <h2>Everything You Need to Know</h2>
+            <p>Find answers to some common questions from parents.</p>
+        </div>
+
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Which classes are available at the school?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    We offer programmes from early childhood education through
+                    primary and secondary school. Please contact the admissions
+                    office for the current class availability.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How can I apply for admission?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Parents can submit an admission enquiry using the form on
+                    this website or contact the school office for application
+                    details and the admission procedure.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Can parents visit the school campus?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes. Parents can contact the school office to arrange a
+                    campus visit and learn more about the facilities.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    What extracurricular activities are available?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Students can participate in activities such as sports,
+                    arts, music, cultural events and other programmes offered
+                    by the school.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How can I contact the admissions team?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    You can call the school office, send an email or submit
+                    the admission enquiry form on this page.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <div class="container contact-grid">
+
+        <div class="contact-content">
+
+            <span class="section-tag">GET IN TOUCH</span>
+
+            <h2>Let's Build a Bright Future Together.</h2>
+
+            <p>
+                Have questions about admissions, academics or campus facilities?
+                Our team would be happy to assist you.
+            </p>
+
+            <div class="contact-detail">
+                <div class="contact-icon">📍</div>
+                <div>
+                    <h4>Our Address</h4>
+                    <p>123 Education Road, Your City, India</p>
+                </div>
+            </div>
+
+            <div class="contact-detail">
+                <div class="contact-icon">☎</div>
+                <div>
+                    <h4>Phone Number</h4>
+                    <p>+91 xxxxxxxxxxxxx</p>
+                </div>
+            </div>
+
+            <div class="contact-detail">
+                <div class="contact-icon">✉</div>
+                <div>
+                    <h4>Email Address</h4>
+                    <p>info@brightfuture.edu.in</p>
+                </div>
+            </div>
+
+            <div class="contact-detail">
+                <div class="contact-icon">◷</div>
+                <div>
+                    <h4>School Office Hours</h4>
+                    <p>Monday – Saturday | 9:00 AM – 4:00 PM</p>
+                </div>
+            </div>
+
+        </div>
+
+        <form class="contact-form" onsubmit="handleForm(event, 'Contact message')">
+
+            <h3>Send Us a Message</h3>
+
+            <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label>Your Message</label>
+                <textarea placeholder="How can we help you?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message →</button>
+
+        </form>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <h2>Bright Future School</h2>
+                <p>
+                    Inspiring young minds through quality education,
+                    meaningful experiences and a commitment to lifelong learning.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#academics">Academics</a>
+                <a href="#facilities">Facilities</a>
+                <a href="#campus">Campus Life</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>For Parents</h3>
+                <a href="#admission">Admissions</a>
+                <a href="#facilities">School Facilities</a>
+                <a href="#campus">Activities</a>
+                <a href="#contact">Contact Office</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <a href="#">123 Education Road</a>
+                <a href="tel:+xxxxxxxx">+91 xxxxxxxxxxxx</a>
+                <a href="mailto:info@brightfuture.edu.in">Email Us</a>
+                <a href="#contact">Get Directions</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Bright Future International School. All Rights Reserved.</span>
+            <span>Designed with ♥ for Better Education</span>
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- SUCCESS MODAL -->
+<div class="modal" id="successModal">
+    <div class="modal-content">
+        <h2>Thank You! 🎉</h2>
+        <p id="modalMessage">
+            Your information has been received successfully.
+        </p>
+        <button class="btn btn-primary" onclick="closeModal()">Continue</button>
+    </div>
+</div>
+
+<script>
+
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+
+function closeMenu() {
+    document.getElementById("navLinks").classList.remove("active");
+}
+
+function toggleFaq(element) {
+    const item = element.parentElement;
+    item.classList.toggle("active");
+}
+
+function handleForm(event, formType) {
+    event.preventDefault();
+
+    document.getElementById("modalMessage").innerText =
+        "Your " + formType.toLowerCase() +
+        " has been submitted successfully. Our team will contact you soon.";
+
+    document.getElementById("successModal").style.display = "flex";
+
+    event.target.reset();
+}
+
+function closeModal() {
+    document.getElementById("successModal").style.display = "none";
+}
+
+window.addEventListener("click", function(event) {
+    const modal = document.getElementById("successModal");
+
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+
+</script>
+
+</body>
+</html>
